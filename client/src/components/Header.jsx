@@ -87,10 +87,16 @@ const Header = () => {
                   } lg:hidden transition-all duration-500 pt-4 lg:absolute lg:bottom-0 lg:right-0 lg:transform lg:translate-y-full lg:group-hover:block w-max`}
                 >
                   <ul className="bg-dark-soft lg:bg-white text-center flex flex-col shadow-lg rounded-lg overflow-hidden">
-                    <Link className="hover:bg-dark-hard hover:text-white px-4 py-2 text-white lg:text-dark-soft" onClick={showMenuHandler}>
+                    <Link
+                      className="hover:bg-dark-hard hover:text-white px-4 py-2 text-white lg:text-dark-soft"
+                      onClick={showMenuHandler}
+                    >
                       About Us
                     </Link>
-                    <Link className="hover:bg-dark-hard hover:text-white px-4 py-2 text-white lg:text-dark-soft" onClick={showMenuHandler}>
+                    <Link
+                      className="hover:bg-dark-hard hover:text-white px-4 py-2 text-white lg:text-dark-soft"
+                      onClick={showMenuHandler}
+                    >
                       Contact Us
                     </Link>
                   </ul>
@@ -98,7 +104,9 @@ const Header = () => {
               </div>
             </li>
             <li className="relative group">
-              <Link className="px-4 py-2" onClick={showMenuHandler}>Faq</Link>
+              <Link className="px-4 py-2" onClick={showMenuHandler}>
+                Faq
+              </Link>
               <span className="cursor-pointer text-blue-500 absolute transition-all duration-500 font-bold right-0 top-0 group-hover:right-[90%] opacity-0 group-hover:opacity-100">
                 /
               </span>
@@ -151,12 +159,13 @@ const Header = () => {
               </div>
             </div>
           ) : (
-            <button
-              onClick={() => navigate("/login")}
+            <Link
+              to="/login"
+              onClick={showMenuHandler}
               className="mt-5 lg:mt-0 border-2 border-blue-500 px-6 py-2 rounded-full text-blue-500 font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
             >
               Sign in
-            </button>
+            </Link>
           )}
         </div>
       </header>
